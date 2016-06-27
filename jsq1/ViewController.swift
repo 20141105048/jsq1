@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     var d=0.0
     @IBOutlet weak var q: UITextField!
     @IBAction func a10(sender: AnyObject) {
-        q.text=q.text!+"-"
+        temp=(Double)(q.text!)!
+        temp=(-temp)
+        q.text="\(temp)"
     }
     @IBAction func chu(sender: AnyObject) {
         panduan=4
@@ -75,8 +77,9 @@ class ViewController: UIViewController {
     
     }
     @IBAction func a(sender: AnyObject) {
+        
         q.text=q.text!+"."
-    }
+            }
     @IBAction func add(sender: AnyObject) {
         panduan=1
         temp=(Double)(q.text!)!
