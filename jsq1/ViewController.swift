@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     var s=0
     var a=0.0
     var b=0.0
-    var c=0.0
-    var d=0.0
+    
+    var flog:Bool=false;
     @IBOutlet weak var q: UITextField!
     @IBAction func a10(sender: AnyObject) {
         temp=(Double)(q.text!)!
@@ -24,6 +24,12 @@ class ViewController: UIViewController {
     }
     @IBAction func chu(sender: AnyObject) {
         panduan=4
+        
+        temp=(Double)(q.text!)!
+        q.text=""
+    }
+    @IBAction func add(sender: AnyObject) {
+        panduan=1
         temp=(Double)(q.text!)!
         q.text=""
     }
@@ -38,7 +44,7 @@ class ViewController: UIViewController {
         temp=(Double)(q.text!)!
         q.text=""
     }
-    @IBAction func a0(sender: AnyObject) {
+           @IBAction func a0(sender: AnyObject) {
         q.text=q.text!+"0"
         
     }
@@ -67,6 +73,7 @@ class ViewController: UIViewController {
     }
     @IBAction func qingchu(sender: AnyObject) {
         q.text=""
+        flog=false;
     }
     @IBAction func a1(sender: AnyObject) {
         q.text=q.text!+"1"
@@ -76,33 +83,39 @@ class ViewController: UIViewController {
         q.text=q.text!+"2"
     
     }
-    @IBAction func a(sender: AnyObject) {
-        
-        q.text=q.text!+"."
-            }
-    @IBAction func add(sender: AnyObject) {
-        panduan=1
-        temp=(Double)(q.text!)!
-        q.text=""
+   
+    @IBAction func a00(sender: AnyObject) {
+        if(flog==false){
+            q.text=q.text!+"."
+            flog=true;
+        }
     }
-    @IBAction func dengyu(sender: AnyObject) {
+    
+       @IBAction func dengyu(sender: AnyObject) {
         if(panduan==1){
             a=temp+(Double)(q.text!)!
             q.text="\(a)"
         }
         if(panduan==2){
-            b=temp-(Double)(q.text!)!
-            q.text="\(b)"
+            a=temp-(Double)(q.text!)!
+            q.text="\(a)"
         }
         
         if(panduan==3){
-            c=temp*(Double)(q.text!)!
-            q.text="\(c)"
+            a=temp*(Double)(q.text!)!
+            q.text="\(a)"
         }
         if(panduan==4){
-            d=temp/(Double)(q.text!)!
-            q.text="\(d)"
-        }
+            b=(Double)(q.text!)!
+            if(b==0){
+                q.text="0不能做除数"
+            }
+            else{
+            
+            a=temp/(Double)(q.text!)!
+            q.text="\(a)"}
+        
+    }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
