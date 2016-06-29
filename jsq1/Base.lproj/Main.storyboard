@@ -149,8 +149,23 @@
                                     <action selector="a10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IbR-hM-uIX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-4O-eAm">
+                                <rect key="frame" x="179" y="104" width="30" height="30"/>
+                                <state key="normal" title="1/x"/>
+                                <connections>
+                                    <action selector="x:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SJC-6A-5Mg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70I-V9-e13">
+                                <rect key="frame" x="111" y="104" width="30" height="30"/>
+                                <state key="normal" title="x2"/>
+                                <connections>
+                                    <action selector="x2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBy-XX-e47"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="q" destination="Kta-zx-9uC" id="b7G-LG-gky"/>

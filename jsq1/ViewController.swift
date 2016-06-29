@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var s=0
     var a=0.0
     var b=0.0
+   
     
     var flog:Bool=false;
     @IBOutlet weak var q: UITextField!
@@ -89,6 +90,28 @@ class ViewController: UIViewController {
             q.text=q.text!+"."
             flog=true;
         }
+    }
+   
+    
+    @IBAction func x(sender: AnyObject) {
+        temp=(Double)(q.text!)!
+        if(temp==0){
+            q.text="0不能做除数"
+        }
+        else{
+            
+        temp=1/temp
+        q.text="\(temp)"
+        }
+        
+    }
+        
+    
+    @IBAction func x2(sender: AnyObject) {
+        temp=(Double)(q.text!)!
+        temp=temp*temp
+        q.text="\(temp)"
+        
     }
     
        @IBAction func dengyu(sender: AnyObject) {
